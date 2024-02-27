@@ -1,0 +1,36 @@
+$color-primario:rgb(160,12,12);
+
+@mixin flexbox($direccion,$jc,$ai){
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+}
+
+header{
+    height: 100px;
+    color: white;
+    background-color: $color-primario;
+    @include flexbox(row, space-between, center);
+    a{
+        color:white;
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+        @include flexbox(row, space-between, center);
+        li{
+            width: 100px;;
+            text-align: center;
+        }
+    }
+}
